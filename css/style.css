@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(41, 41, 41);
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+
+.container {
+    width: 100%;
+    padding: 2% 5%;
+}
+
+/* header  */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav li {
+    display: inline-block;
+    padding-right: 30px;
+    font-size: 0.9rem;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: rgb(255, 158, 2);
+    font-family: 'Audiowide', cursive;
+}
+
+nav a:hover,
+nav .active {
+    color: rgb(234, 0, 255);
+}
+
+button {
+    padding: 15px 50px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+    background-color: rgba(95, 253, 206, 0.5);
+}
+
+button:hover {
+    padding: 15px 51px;
+    background-color: rgba(31, 251, 97, 0.5);
+}
+
+/* end header */
+/* toggle bar */
+.bar-toggle {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border: 1px #fff solid;
+    border-radius: 2px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 2px;
+}
+
+.bar-toggle:hover {
+    background-color: rgb(255, 112, 112);
+}
+
+.bar-toggle {
+    display: none;
+}
+
+/* end */
+
+/* body */
+
+/* body rows */
+.rows {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.col {
+    width: 50%;
+}
+
+.row-1 .col-1 {
+    padding-bottom: 100px;
+}
+
+.face {
+    font-weight: bold;
+    font-size: 5vw;
+    color: rgb(89, 189, 255);
+    font-family: 'Fredericka the Great', cursive;
+}
+
+#face {
+    transition: all 0.5s ease 0s;
+    /* animation-name: face-animation;
+    animation-duration: 3s; */
+    animation: face-animation 3s;
+}
+
+@keyframes face-animation {
+    0% {
+        color: rgb(89, 189, 255);
+        transform: translate(0px, -500px);
+    }
+
+    25% {
+        color: rgb(89, 189, 20);
+    }
+
+
+    50% {
+        color: rgb(255, 190, 100);
+    }
+
+    75% {
+        color: rgb(9, 190, 100);
+    }
+
+    100% {
+        color: rgb(89, 189, 255);
+    }
+}
+
+#detail {
+    padding-top: 5px;
+    padding-left: 2px;
+    font-size: 2vw;
+    color: white;
+    opacity: 0.5;
+    /* animation-name: detail;
+    animation-duration: 5s; */
+    animation: detail 5s;
+}
+
+@keyframes detail {
+    0% {
+        transform: translate(-2500px, 0);
+    }
+}
+
+#button {
+    margin-top: 5%;
+    /* animation-name: btn;
+    animation-duration: 5s;
+    animation-fill-mode: forwards; */
+    animation: btn 5s ease normal 1 forwards;
+    opacity: 0;
+}
+
+@keyframes btn {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.row-1 .col-2 {
+    height: 50vw;
+    background: url('../img/hero-img.png') no-repeat;
+    background-size: contain;
+    /* animation-name: pro-image;
+    animation-duration: 5s;
+    animation-fill-mode: forwards; */
+    animation: pro-image 5s;
+}
+
+@keyframes pro-image {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.services {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.services h2,
+.client h2,
+.services>p,
+.client>p {
+    text-align: center;
+    color: white;
+    padding-bottom: 2%;
+}
+
+.services>p,
+.client>p {
+    font-size: 110%;
+}
+
+.services>p,
+.client>p {
+    font-size: 16px;
+}
+
+.row-3 .col {
+    width: 31%;
+    height: 430px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 1);
+    text-align: center;
+    padding-top: 45px;
+    transition: all 0.5s ease 0s;
+}
+
+.row-3 .col:hover {
+    background-color: rgb(255, 255, 255);
+    height: 431px;
+    transform: translate(0, 12px);
+}
+
+.row-3 h3,
+.row-5 h3 {
+    font-size: 20px;
+    padding-top: 1em;
+}
+
+.row-3 p,
+.row-5 p {
+    font-size: 0.6em;
+    padding: 15px;
+}
+
+
+.row-4 {
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.row-4 .col-2 {
+    width: 50%;
+    height: 50vw;
+    background: url('../img/about-img.png') no-repeat;
+    background-size: contain;
+}
+
+.row-5 .col-1 {
+    width: 10%;
+}
+
+/*  end rows*/
+/* end body */
+
+/* footer */
+footer {
+    background-color: rgba(4, 4, 36, 0.6);
+    font-size: 0.5em;
+    color: white;
+}
+
+.row-2 {
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 50px;
+}
+
+.row-2 p {
+    opacity: 0.6;
+    padding-top: 20px;
+
+}
+
+.row-2 li {
+    opacity: 0.6;
+    list-style: none;
+    padding-top: 10px;
+}
+
+.row-2 li a {
+    text-decoration: none;
+    color: white;
+}
+
+.row-2 .col {
+    width: 24%;
+}
+
+.row-2 .rows {
+    padding: 3px;
+}
+
+.rows .inrow-1 {
+    padding-top: 20px;
+}
+
+.row-2 input {
+    width: 80%;
+    height: 35px;
+    margin-top: 20px;
+    padding-left: 10px;
+    background-color: rgba(4, 4, 36, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+}
+
+.copyright {
+    padding-top: 20px;
+}
+
+/* end footer */
+
+/* 
+=================
+about
+=================
+*/
+.row-5 {
+    align-items: flex-start;
+}
+
+.row-5 .col {
+    width: 48%;
+}
+
+.row-5 .col-1 {
+    height: 41vw;
+}
+
+.row-5 .img {
+    object-fit: cover;
+    object-position: center;
+    height: 370px;
+
+}
+
+.row-5 .face {
+    color: white;
+    font-size: 1em;
+}
+
+.row-5 .detail {
+    color: white;
+    font-size: 0.8em;
+    margin: 5px;
+}
+
+.desc {
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: white;
+    width: 70%;
+    padding: 20px;
+    opacity: 0;
+}
+
+.desc h2 {
+    font-size: 0.7em;
+    margin-bottom: 0px;
+    padding-bottom: 0;
+}
+
+.desc .price {
+    color: blue;
+    padding-left: 30%;
+}
+
+.desc p {
+    padding: 2px;
+}
